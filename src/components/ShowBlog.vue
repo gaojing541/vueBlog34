@@ -21,12 +21,24 @@ export default {
         }
     },
     created(){
-        this.$http.get('http://jsonplaceholder.typicode.com/posts')
+        //this.$http.get('http://jsonplaceholder.typicode.com/posts')
+        this.$http.get('https://myblog-b7151.firebaseio.com/posts.json')
         //this.$http.get("./../static/posts.json")
                   .then(function(data){
                       //console.log(data);
-                     this.blogs = data.body.slice(0,10);
-                     //console.log(this.blogs)
+                      //console.log(data.json());
+                      return data.json();
+                     //this.blogs = data.body.slice(0,10);
+                     //console.log(this.blogs);
+                  })
+                  .then(function(data){
+                      var blogsArray = [];
+                      for(let key in data){
+                          data[key].id = key;
+                          blogsArray.push(data[key]);
+                      }
+                      console.log(blogsArray);
+
                   })  
     },
     computed:{
