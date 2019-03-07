@@ -20,7 +20,7 @@
         
         <p for="">作者</p>
         <select name="" id="" v-model="blog.author">
-          <option v-for="author in authors">
+          <option v-for="author in authors"  :key="author">
             {{author}}
           </option>
         </select>
@@ -43,7 +43,7 @@
 
       <p>博客分类：</p>
       <ul>
-        <li v-for="category in blog.categories">{{category}}</li>
+        <li v-for="category in blog.categories" :key="category">{{category}}</li>
       </ul>
 
       <p>作者：{{blog.author}}</p>
@@ -72,7 +72,7 @@ export default {
   },
   methods:{
     fetchData(){
-        this.$http.get('https://myblog-b7151.firebaseio.com/posts/' + this.id + ".json")
+        this.$http.get('https://wd7747294513zslrqc.wilddogio.com/post/' + this.id + ".json")
             .then(response =>{
                 console.log(response.body);
                 this.blog = response.body;

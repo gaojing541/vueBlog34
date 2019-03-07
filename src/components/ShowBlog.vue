@@ -2,7 +2,7 @@
     <div id="show-blogs">
         <h1>博客总览</h1>
         <input type="text" v-model="search" placeholder="搜索" >
-        <div class="single-blog" v-for="blog in filteredBlogs">
+        <div class="single-blog" v-for="blog in filteredBlogs" :key="blog.title">
             <router-link v-bind:to="'/blog/' + blog.id"><h2 v-rainbow>{{blog.title | to-uppercase}}</h2></router-link>
             <article>
                 {{blog.content | snippet}}
@@ -22,7 +22,8 @@ export default {
     },
     created(){
         //this.$http.get('http://jsonplaceholder.typicode.com/posts')
-        this.$http.get('https://myblog-b7151.firebaseio.com/posts.json')
+        //this.$http.get('https://myblog-b7151.firebaseio.com/posts.json')
+        this.$http.get('https://wd7747294513zslrqc.wilddogio.com/post.json')
         //this.$http.get("./../static/posts.json")
                   .then(function(data){
                       //console.log(data);

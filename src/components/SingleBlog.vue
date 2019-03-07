@@ -5,7 +5,7 @@
         <p>作者：{{blog.author}}</p>
         <p>分类</p>
         <ul>
-            <li v-for="category in blog.categories">
+            <li v-for="category in blog.categories" :key="category">
                 {{category}}
             </li>
         </ul>
@@ -25,7 +25,7 @@ export default {
         }
     },
     created(){
-        this.$http.get('https://myblog-b7151.firebaseio.com/posts/' + this.id + ".json")
+        this.$http.get('https://wd7747294513zslrqc.wilddogio.com/post/' + this.id + ".json")
             .then(function(data){
                 //console.log(data);
                 return data.json();
@@ -38,7 +38,7 @@ export default {
     },
     methods:{
         deleteSingleBlog(){
-            this.$http.delete('https://myblog-b7151.firebaseio.com/posts/' + this.id + ".json")
+            this.$http.delete('https://wd7747294513zslrqc.wilddogio.com/post/' + this.id + ".json")
                 .then(response =>{
                     this.$router.push({path:'/'});
                 })
