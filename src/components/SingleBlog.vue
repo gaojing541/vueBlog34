@@ -1,7 +1,16 @@
 <template>
     <div id="single-blog">
         <h1>{{blog.title}}</h1>
-        <article>{{blog.body}}</article>
+        <article>{{blog.content}}</article>
+        <p>作者：{{blog.author}}</p>
+        <p>分类</p>
+        <ul>
+            <li v-for="category in blog.categories">
+                {{category}}
+            </li>
+        </ul>
+        <button @click="deleteSingleBlog">删除</button>
+        <router-link :to="'/edit/' + id ">编辑</router-link>
     </div>
     
 </template>
@@ -16,11 +25,24 @@ export default {
         }
     },
     created(){
-        this.$http.get('http://jsonplaceholder.typicode.com/posts/' + this.id)
+        this.$http.get('https://myblog-b7151.firebaseio.com/posts/' + this.id + ".json")
+            .then(function(data){
+                //console.log(data);
+                return data.json();
+                //this.blog = data.body;
+            })
             .then(function(data){
                 console.log(data);
-                this.blog = data.body;
+                this.blog = data;
             })
+    },
+    methods:{
+        deleteSingleBlog(){
+            this.$http.delete('https://myblog-b7151.firebaseio.com/posts/' + this.id + ".json")
+                .then(response =>{
+                    this.$router.push({path:'/'});
+                })
+        }
     }
 }
 </script>

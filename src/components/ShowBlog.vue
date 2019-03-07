@@ -5,7 +5,7 @@
         <div class="single-blog" v-for="blog in filteredBlogs">
             <router-link v-bind:to="'/blog/' + blog.id"><h2 v-rainbow>{{blog.title | to-uppercase}}</h2></router-link>
             <article>
-                {{blog.body | snippet}}
+                {{blog.content | snippet}}
             </article>
         </div>
     </div>
@@ -37,8 +37,8 @@ export default {
                           data[key].id = key;
                           blogsArray.push(data[key]);
                       }
-                      console.log(blogsArray);
-
+                      //console.log(blogsArray);
+                     this.blogs = blogsArray;
                   })  
     },
     computed:{
