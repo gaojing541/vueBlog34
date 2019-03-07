@@ -65,11 +65,8 @@ export default {
         // content:"",
         // categories:[],
         // author:''
-
       },
-
       authors:["v_llluo","v_jinggao"],
-
       submmited:false
     }
   },
