@@ -53,6 +53,7 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
   
   //模拟数据json： http://jsonplaceholder.typicode.com/posts
@@ -72,15 +73,17 @@ export default {
   },
   methods:{
     fetchData(){
-        this.$http.get('https://wd7747294513zslrqc.wilddogio.com/post/' + this.id + ".json")
+        //this.$http.get('https://wd7747294513zslrqc.wilddogio.com/post/' + this.id + ".json")
+            axios.get('/post/' + this.id +".json")
             .then(response =>{
-                console.log(response.body);
-                this.blog = response.body;
+                console.log(response);
+                this.blog = response.data;
             })
     },  
     post:function(){
       //this.$http.post("http://jsonplaceholder.typicode.com/posts",
-      this.$http.put('https://myblog-b7151.firebaseio.com/posts/' + this.id + ".json",
+      //this.$http.put('https://wd7747294513zslrqc.wilddogio.com/post/' + this.id + ".json",
+      axios.put('/post/' + this.id + ".json",
       // {
       //   title:this.blog.title,
       //   body:this.blog.content,
@@ -88,7 +91,8 @@ export default {
       // }
       this.blog
       )
-        .then(function(data){
+        //.then(function(data){
+          .then((data)=>{
           console.log(data);
           this.submmited = true;
         })

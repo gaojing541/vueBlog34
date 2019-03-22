@@ -12,6 +12,8 @@
 </template>
 
 <script>
+// import axios from 'axios'
+import axios from '../axios-auth'
 export default {
     name:'show-blogs',
     data(){
@@ -23,16 +25,19 @@ export default {
     created(){
         //this.$http.get('http://jsonplaceholder.typicode.com/posts')
         //this.$http.get('https://myblog-b7151.firebaseio.com/posts.json')
-        this.$http.get('https://wd7747294513zslrqc.wilddogio.com/post.json')
+        //this.$http.get('https://wd7747294513zslrqc.wilddogio.com/post.json')
+        axios.get('/post.json')
         //this.$http.get("./../static/posts.json")
                   .then(function(data){
-                      //console.log(data);
                       //console.log(data.json());
-                      return data.json();
+                      //return data.json();
+                      return data.data;
                      //this.blogs = data.body.slice(0,10);
                      //console.log(this.blogs);
+                     
                   })
-                  .then(function(data){
+                  //.then(function(data){
+                  .then((data)=>{    
                       var blogsArray = [];
                       for(let key in data){
                           data[key].id = key;
