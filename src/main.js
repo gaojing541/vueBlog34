@@ -1,14 +1,21 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import VueResource from 'vue-resource'
+// import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 
 import Routes from './routes'
+import axios from 'axios'
+
+//axios全局配置 
+axios.defaults.baseURL = 'https://wd7747294513zslrqc.wilddogio.com'
+//axios.defaults.headers.common['Authorization'] = 'Token'
+// axios.defaults.headers.post['Content-type'] = ''
+
 
 Vue.config.productionTip = false
 
-Vue.use(VueResource);
+// Vue.use(VueResource);
 Vue.use(VueRouter);
 
 //自定义指令

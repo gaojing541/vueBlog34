@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import axios from axios;
+import axios from "axios"
 export default {
   
   //模拟数据json： http://jsonplaceholder.typicode.com/posts
@@ -76,22 +76,23 @@ export default {
     post:function(){
       //this.$http.post("http://jsonplaceholder.typicode.com/posts",
       // this.$http.post('https://myblog-b7151.firebaseio.com/posts.json',
-      this.$http.post('https://wd7747294513zslrqc.wilddogio.com/post.json',
-     
-      // {
-      //   title:this.blog.title,
-      //   body:this.blog.content,
-      //   userId:1
-      // }
-      this.blog
-      )
-        .then(function(data){
+      //this.$http.post('https://wd7747294513zslrqc.wilddogio.com/post.json',
+      //var _this = this; 不用_this 改用ES6箭头函数 
+
+      
+      axios.post('/post.json',this.blog)
+        //.then(function(data){ 
+        .then((data) => {  //不用_this 改用ES6箭头函数
           console.log(data);
+          //_this.submmited = true;
           this.submmited = true;
         })
     }
   }
 }
+
+
+
 </script>
 
 <style scoped>
@@ -138,4 +139,5 @@ button{
 h3{
   margin-top: 10px;
 }
+
 </style>

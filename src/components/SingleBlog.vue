@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     name:"single-blog",
     data(){
@@ -25,21 +26,25 @@ export default {
         }
     },
     created(){
-        this.$http.get('https://wd7747294513zslrqc.wilddogio.com/post/' + this.id + ".json")
-            .then(function(data){
-                //console.log(data);
-                return data.json();
+        // this.$http.get('https://wd7747294513zslrqc.wilddogio.com/post/' + this.id + ".json")
+            axios.get('/post/' + this.id + ".json")
+            .then((data) => {
+                console.log(data);
+                //return data.json();
+                return data.data;
                 //this.blog = data.body;
             })
-            .then(function(data){
+            //.then(function(data){
+            .then((data) => {
                 console.log(data);
                 this.blog = data;
             })
     },
     methods:{
         deleteSingleBlog(){
-            this.$http.delete('https://wd7747294513zslrqc.wilddogio.com/post/' + this.id + ".json")
-                .then(response =>{
+            //this.$http.delete('https://wd7747294513zslrqc.wilddogio.com/post/' + this.id + ".json")
+                axios.delete('/post/' + this.id + ".json")
+                .then( response =>{
                     this.$router.push({path:'/'});
                 })
         }
