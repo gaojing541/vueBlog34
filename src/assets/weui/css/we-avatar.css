@@ -1,0 +1,145 @@
+@charset "utf-8";
+.we-avatar {
+    position: relative;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.we-avatar-pic {
+    border-radius: 50%;
+}
+
+.we-avatar-add {
+    position: absolute;
+    bottom: -0.24rem;
+    right: -0.24rem;
+    padding: 0.08rem 0.24rem 0.24rem;
+    width: 0.48rem;
+    height: 0.48rem;
+    font-size: 0.48rem;
+    color: #0f97ff;
+}
+
+.we-avatar-micon {
+    width: 0.48rem;
+    height: 0.48rem;
+    border-radius: 50%;
+    line-height: 0.48rem;
+    text-align: center;
+    font-size: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #1ccb5e;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.we-avatar-micoff {
+    width: 0.48rem;
+    height: 0.48rem;
+    border-radius: 50%;
+    line-height: 0.48rem;
+    text-align: center;
+    font-size: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ccc;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.we-avatar-edit {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.48rem;
+    line-height: 0.48rem;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 0.3rem;
+}
+
+.we-avatar-ingame {
+    width: 0.24rem;
+    height: 0.24rem;
+    border: 0.03rem solid #fff;
+    border-radius: 50%;
+    background-color: #face4a;
+    position: absolute;
+    bottom: 0.08rem;
+    right: 0.08rem;
+}
+
+.we-avatar-online {
+    width: 0.24rem;
+    height: 0.24rem;
+    border: 0.03rem solid #fff;
+    border-radius: 50%;
+    background-color: #1ccb5e;
+    position: absolute;
+    bottom: 0.08rem;
+    right: 0.08rem;
+}
+
+.we-avatar--edit {
+    overflow: hidden;
+}
+
+.we-avatar--big {
+    width: 1.76rem;
+    height: 1.76rem;
+}
+
+.we-avatar--big .we-avatar-pic {
+    width: 1.76rem;
+    height: 1.76rem;
+    border-radius: 50%;
+}
+
+.we-avatar--big.we-avatar--border {
+    border: 0.08rem solid #fff;
+}
+
+.we-avatar--middle {
+    width: 1.44rem;
+    height: 1.44rem;
+}
+
+.we-avatar--middle .we-avatar-pic {
+    width: 1.44rem;
+    height: 1.44rem;
+}
+
+.we-avatar--middle.we-avatar--border {
+    border: 0.06rem solid #fff;
+}
+
+.we-avatar--small {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.we-avatar--small .we-avatar-pic {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.we-avatar--small.we-avatar--border {
+    border: 0.02rem solid rgba(0,0,0,0.07);
+}
+
+.we-avatar--mini {
+    width: 0.72rem;
+    height: 0.72rem;
+}
+
+.we-avatar--mini .we-avatar-pic {
+    width: 0.72rem;
+    height: 0.72rem;
+}
+
+.we-avatar--mini.we-avatar--border {
+    border: 0.05rem solid #fff;
+}

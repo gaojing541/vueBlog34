@@ -1,0 +1,47 @@
+.we-button {
+  min-width: 1rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  font-size: 0.32rem;
+  padding: 0 0.24rem;
+}
+
+.we-button--default {
+  color: rgba(0,0,0,0.80);
+  background-color: #FFFFFF;
+}
+
+.we-button--default.disabled {
+  color: #999;
+  border-color: #ccc;
+}
+
+.we-button--primary {
+  color: #FFFFFF;
+  background-color: #FFC446;
+}
+
+.we-button--primary.disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #999;
+}
+
+.we-button--full {
+  width: 100%;
+}
+
+.we-button--middle {
+  
+}
+
+.we-button--small {
+  height: 0.48rem;
+  line-height: 0.48rem;
+  border-radius: 0.24rem;
+  font-size: 0.24rem;
+}

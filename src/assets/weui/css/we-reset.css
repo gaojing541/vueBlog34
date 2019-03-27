@@ -1,0 +1,130 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, pre, dl, dt, dd, ul, ol, li, th, td, form, fieldset, legend, button, input, textarea, figure, figcaption, nav, footer, menu, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+address, em, i, b {
+  font-style: normal;
+}
+
+a, a:hover, a:active, a:visited {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  font-size: 0;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+:focus, button, input, select, textarea {
+  outline: none;
+}
+
+textarea, input, select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+textarea, input {
+  background: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  resize: none;
+  cursor: text;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+a, img {
+  -webkit-user-drag: none;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+body {
+  word-wrap: break-word;
+  -webkit-text-size-adjust: none;
+}
+
+body, button, input, textarea, select, code, ::-webkit-placeholder {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Roboto, Ubuntu, "DejaVu Sans", Arial, "PingFang SC", "Hiragino Sans GB", "Source Han Sans", "Microsoft YaHei UI", "Microsoft Yahei", "Heiti SC", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  outline: none;
+}
+
+/* 模块：scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.06rem;
+  height: 0.06rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: none;
+  border-radius: 0.06rem;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  width: 0.06rem;
+  border-radius: 0.06rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+::-webkit-scrollbar-resizer {
+  display: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,8 @@
+.we-badge { position: relative; display: inline-block; line-height: 1; vertical-align: middle; white-space: nowrap; font-size: 0; }
+.we-badge-text { height: 18px; line-height: 18px; min-width: 8px; border-radius: 18px; padding: 0 5px; text-align: center; vertical-align: middle; font-size: 12px; color: #fff; background-color: #ff0a0a; }
+.we-badge-num { height: 18px; line-height: 18px; min-width: 8px; border-radius: 18px; padding: 0 5px; text-align: center; vertical-align: middle; font-size: 12px; color: #fff; background-color: #ff0a0a; }
+.we-badge-dot { height: 8px; width: 8px; border-radius: 100%; background: #ff0a0a; z-index: 10; -webkit-transform-origin: 0 center; transform-origin: 0 center; }
+.we-badge--primary .we-badge-text, .we-badge--primary .we-badge-num, .we-badge--primary .we-badge-dot { position: relative; top: auto; display: block; -webkit-transform: translateX(0); transform: translateX(0); }
+.we-badge--absolute .we-badge-text, .we-badge--absolute .we-badge-num { position: absolute; top: -4px; -webkit-transform: translateX(-35%); transform: translateX(-35%); }
+.we-badge--absolute .we-badge-dot { position: absolute; top: -4px; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transform-origin: 0 center; transform-origin: 0 center; }
+.we-badge--brdot .we-badge-dot { top: auto; bottom: -4px; padding: 0; min-width: 0; height: 8px; width: 8px; border-radius: 100%; background-color: #ff0a0a; z-index: 10; }

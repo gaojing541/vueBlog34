@@ -7,6 +7,9 @@ import VueRouter from 'vue-router'
 import Routes from './routes'
 import axios from 'axios'
 
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 //axios全局配置 
 axios.defaults.baseURL = 'https://wd7747294513zslrqc.wilddogio.com'
 //axios.defaults.headers.common['Authorization'] = 'Token'

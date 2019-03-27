@@ -1,0 +1,11 @@
+@keyframes animate_frames_vertical {
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+@keyframes animate_frames_horizontal {
+    100% {
+        background-position: 100% 0;
+    }
+}

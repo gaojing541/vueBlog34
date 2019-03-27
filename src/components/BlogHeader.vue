@@ -2,13 +2,15 @@
     <nav>
         <ul>
             <li>
-                <router-link to="/">博客</router-link>
+                
+                <router-link to="/"><el-button>博客</el-button></router-link>
             </li>
             <li>
-                <router-link to="/addBlog">写博客</router-link>
+                <router-link to="/addBlog"><el-button type="primary" plain>写博客</el-button></router-link>
             </li>
         </ul>
     </nav>
+    
 </template>
 
 <script>
@@ -19,6 +21,7 @@ export default {
 <style scoped>
 nav{
     margin: 0 30px;
+    padding: 10px 0;
 }
 .router-link-active{
     

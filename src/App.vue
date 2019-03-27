@@ -1,10 +1,19 @@
 <template>
   <div id="app">
+    <el-container>
       <!-- <AddBlog></AddBlog>
       <ShowBlog></ShowBlog> -->
-      <blog-header></blog-header>
+      <el-header>
+        <blog-header></blog-header>
+      </el-header>
+
+      <el-main>
+        <router-view></router-view>
+      </el-main>
       
-      <router-view></router-view>
+      
+      
+    </el-container>  
       
   </div>
 </template>

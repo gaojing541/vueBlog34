@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+.we-toast {
+    max-width: 4rem;
+    background-color: #FFF;
+    border-radius: 0.16rem;
+    text-align: center;
+}
+
+.we-toast-inner {
+    padding: 0.5rem 1rem;
+    font-size: 0.28rem;
+    color: #313131;
+    display: inline-block;
+    position: relative;
+}
+
+.we-toast-icon {
+    color: #fff;
+    display: block;
+    margin: 0.04rem auto 0.2rem;
+    font-size: 0.64rem;
+}
+
+.we-toast-icon:active {
+    color: #fff;
+}
+
+.we-toast-note {
+    line-height: 0.5rem;
+}
+
+.we-toast--icon .we-toast-inner {
+    padding: 0.52rem 0.56rem;
+}

@@ -1,16 +1,29 @@
 <template>
     <div id="single-blog">
         <h1>{{blog.title}}</h1>
+        <div class="pubtime">
+            <span class="author">作者：{{blog.author}}</span>
+            <span class="categories" v-if="blog.categories">
+                标签： 
+                <span v-for="category in blog.categories" :key="category">
+                    {{category}}
+                </span>
+            </span>
+        </div>
+
         <article>{{blog.content}}</article>
-        <p>作者：{{blog.author}}</p>
+
+<!--        
         <p>分类</p>
         <ul>
             <li v-for="category in blog.categories" :key="category">
                 {{category}}
             </li>
-        </ul>
-        <button @click="deleteSingleBlog">删除</button>
-        <router-link :to="'/edit/' + id ">编辑</router-link>
+        </ul> -->
+        <el-button @click="deleteSingleBlog">删除</el-button>
+        
+        <!-- <button @click="deleteSingleBlog">删除</button> -->
+        <router-link :to="'/edit/' + id "><el-button>编辑</el-button></router-link>
     </div>
     
 </template>
@@ -22,7 +35,8 @@ export default {
     data(){
         return{
             id:this.$route.params.id,
-            blog:{} 
+            blog:{},
+            
         }
     },
     created(){
@@ -57,6 +71,21 @@ export default {
     padding: 20px;
     background-color: #eee;
     border: solid 1px #ddd;
+}
+h1{
+     padding: 6px 0 1px;
+    font-size: 24px;
+    color: #3c3c3c;
+    line-height: 35px;
+    text-align: center;
+}
+.pubtime {
+    margin: 1px 0 9px;
+    color: #c5c5c5;
+    font-size: 12px;
+}
+.categories span{
+    margin-left: 5px;
 }
 </style>
 

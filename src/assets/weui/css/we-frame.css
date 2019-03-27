@@ -1,0 +1,15 @@
+@charset "utf-8";
+.we-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.we-layout, .we-layout-hd, .we-layout-bd, .we-layout-ft {
+  width: 100%;
+  position: relative;
+}
+
+.we-layout {
+  min-height: 100%;
+}

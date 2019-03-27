@@ -1,0 +1,111 @@
+@charset "utf-8";
+.we-popbox {
+    width: 6rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.15rem;
+    background-color: #fff;
+}
+
+.we-popbox-hd {
+    padding: 0.48em 0.4rem 0 0.4rem;
+    position: relative;
+}
+.we-popbox-bd {
+    padding: 0.16rem 0.4rem 0.32rem 0.4rem;
+    position: relative;
+}
+
+.we-popbox-title {
+    font-size: 0.36rem;
+    color: #333;
+    text-align: center;
+    line-height: 0.7rem;
+    margin: 0 0.72rem;
+}
+
+.we-popbox-content {
+    font-size: 0.32rem;
+    color: #666;
+    text-align: center;
+    max-height: 5.8rem;
+    overflow-y: auto;
+}
+
+.we-popbox-ft {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+
+.we-popbox-ft:before {
+    content: " ";
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    color: #eee;
+    border-top: 1px solid #eee;
+    position: absolute;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.we-popbox-button {
+    -webkit-box-flex: 1;
+    width: 100%;
+    text-align: center;
+    height: 0.96rem;
+    line-height: 0.96rem;
+    cursor: pointer;
+    position: relative;
+    font-size: 0.32rem;
+    display: block;
+}
+
+.we-popbox-button:active {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.we-popbox-button:last-child {
+    border-left: 1px solid #eee;
+    position: relative;
+}
+
+.we-popbox-button:last-child:before {
+    content: " ";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+    background-color: #eee;
+    position: absolute;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.we-popbox-button:first-child:before {
+    display: none;
+}
+
+.we-popbox-button--default {
+    color: #666;
+}
+
+.we-popbox-button--primary {
+    color: #FFC953;
+}

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*=========================
+文件名  ：_mixin.scss
+说  明  ：sass mixin函数
+=========================*/
+/* 函数：rem雪碧图 */
+/** @desc  三角形 @param $width @param $height @param $color @param $direction: top bottom left right */
+/** @param $color @param $direction: top bottom left right vertical all radius,  default: all */
+/**
+* @desc 列表是否存在
+*/
+/** @param $color @param $direction: top bottom left right vertical all radius,  default: all @param $pseudo: after before, default: after @param $radius default: 1px */
+/*=========================
+文件名  ：_variables.scss
+说  明  ：配置参数（包括颜色、字号、透明度等）
+=========================*/
+/*$tabbar-height:88px/2;
+$tabbar-label-font-size:$t5/2;
+$tabbar-label-color:$c4;
+$tabbar-label-cur-color:$c1;
+$tabbar-dep-color:$c7;
+$tabbar-background-color:$c9;
+$tabbar-icon-margin:$d/2;*/
+/*$navbar-height:96px/2;
+$navbar-padding:32px/2;
+$navbar-icon-width:40px/2;
+$navbar-title-color:$c3;
+$navbar-title-font-size:$t1/2;
+$navbar-subtitle-font-size:$t5/2;
+$navbar-subtitle-color:$c4;
+$navbar-left-text-font-size:$t3/2;
+$navbar-left-text-color:$c4;*/
+.widget-card { position: relative; margin-bottom: 0.24rem; }
+.widget-card-images { width: 3.12rem; height: 4.48rem; border-radius: 0.15rem; }
+.widget-card-title { position: absolute; top: 102px; font-size: 14px; color: #fff; left: 5%; text-align: center; width: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 90%; }
+.widget-card-desc { position: absolute; top: 122px; font-size: 12px; opacity: 0.4; color: #fff; left: 5%; text-align: center; width: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 90%; }

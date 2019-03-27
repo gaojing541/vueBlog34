@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*=========================
+文件名  ：_mixin.scss
+说  明  ：sass mixin函数
+=========================*/
+/* 函数：rem雪碧图 */
+/** @desc  三角形 @param $width @param $height @param $color @param $direction: top bottom left right */
+/** @param $color @param $direction: top bottom left right vertical all radius,  default: all */
+/**
+* @desc 列表是否存在
+*/
+/** @param $color @param $direction: top bottom left right vertical all radius,  default: all @param $pseudo: after before, default: after @param $radius default: 1px */
+svg:not(:root) { overflow: hidden; }
+
+.we-navbar { position: relative; height: 44px; line-height: 44px; padding-left: 100px; padding-right: 100px; width: 100%; box-sizing: border-box; -webkit-box-align: center; -webkit-align-items: center; align-items: center; }
+.we-navbar-left, .we-navbar-right { position: absolute; top: 0; height: 100%; -webkit-box-align: center; -webkit-align-items: center; align-items: center; fill: currentColor; width: 100px; cursor: pointer; }
+.we-navbar-left { text-align: left; left: 15px; }
+.we-navbar-left-icon { width: 22px; height: 22px; display: inline-block; vertical-align: middle; }
+.we-navbar-right { text-align: right; right: 15px; }
+.we-navbar-right-icon { width: 22px; height: 22px; display: inline-block; vertical-align: middle; }
+.we-navbar-title { width: 100%; text-align: center; box-sizing: content-box; overflow: hidden; font-size: 16px; }
+.we-navbar-subtitle { font-size: 12px; line-height: 16px; opacity: 0.4; }
+.we-navbar--light { background-color: #fff; color: #108ee9; }
+.we-navbar--light .we-navbar-title { color: #000; }
+.we-navbar--light .we-navbar-subtitle { color: #000; }
+.we-navbar--dark { background-color: #108ee9; color: #fff; }
+.we-navbar--dark .we-navbar-title { color: #fff; }
+.we-navbar--dark .we-navbar-subtitle { color: #fff; }
+.we-navbar--social .we-navbar-title { padding: 6px 0; line-height: 18px; }

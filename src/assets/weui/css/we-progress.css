@@ -1,0 +1,27 @@
+.we-progress {
+    height: 0.08rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.we-progress-bar {
+    width: 100%;
+    height: 100%;
+    background: #CCCCCC;
+    border-radius: 0.04rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.we-progress-curbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(102,102,102);
+    position: absolute;
+}
+
+.we-progress-text {
+    display: none;
+}

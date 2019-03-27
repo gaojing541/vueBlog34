@@ -1,12 +1,17 @@
 <template>
     <div id="show-blogs">
-        <h1>博客总览</h1>
-        <input type="text" v-model="search" placeholder="搜索" >
+        <el-input v-model="search" placeholder="搜索"></el-input>
+
+        <!-- <h1>博客列表</h1> -->
         <div class="single-blog" v-for="blog in filteredBlogs" :key="blog.title">
-            <router-link v-bind:to="'/blog/' + blog.id"><h2 v-rainbow>{{blog.title | to-uppercase}}</h2></router-link>
-            <article>
+            <router-link v-bind:to="'/blog/' + blog.id">
+             <h2>{{blog.title | to-uppercase}}</h2>
+             <!-- <h2 v-rainbow>{{blog.title | to-uppercase}}</h2> -->
+              <article>
                 {{blog.content | snippet}}
-            </article>
+              </article>
+            </router-link>
+           
         </div>
     </div>
 </template>
@@ -26,7 +31,8 @@ export default {
         //this.$http.get('http://jsonplaceholder.typicode.com/posts')
         //this.$http.get('https://myblog-b7151.firebaseio.com/posts.json')
         //this.$http.get('https://wd7747294513zslrqc.wilddogio.com/post.json')
-        axios.get('/post.json')
+        //axios.get('/post.json')
+        axios.get('https://wd7747294513zslrqc.wilddogio.com/post.json')
         //this.$http.get("./../static/posts.json")
                   .then(function(data){
                       //console.log(data.json());
@@ -80,6 +86,15 @@ export default {
     padding: 20px;
     margin:  10px;
     background-color: #eee;
+}
+.single-blog h2{
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+.single-blog article{
+    color: #666;
+    font-size: 14px;
 }
 </style>
 
