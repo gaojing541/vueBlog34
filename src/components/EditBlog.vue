@@ -39,39 +39,6 @@
 
     </el-form>
 
-
-    <!-- <form action="" v-if="!submmited">
-      <label for="">博客标题</label>
-      <input type="text" v-model="blog.title" required>
-
-      <label for="">博客内容</label>
-      <textarea v-model="blog.content"></textarea>
-
-      <div id="checkboxes">
-        <label for="">vue.js</label>
-        <input type="checkbox" value="Vue.js" v-model="blog.categories">
-        <label for="">Node.js</label>
-        <input type="checkbox" value="Node.js" v-model="blog.categories">
-        <label for="">React.js</label>
-        <input type="checkbox" value="React.js" v-model="blog.categories">
-        <label for="">Aangular4.js</label>
-        <input type="checkbox" value="Aangular4.js" v-model="blog.categories">
-        
-        <p for="">作者</p>
-        <select name="" id="" v-model="blog.author">
-          <option v-for="author in authors"  :key="author">
-            {{author}}
-          </option>
-        </select>
-
-        <button v-on:click.prevent="post">编辑博客</button>
-      </div>
-    </form>
-    
-    <div v-if="submmited">
-      <h3>你的博客发送成功！</h3>
-    </div> -->
-
     <hr>
 
     <div id="preview">

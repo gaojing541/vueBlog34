@@ -3,13 +3,20 @@ import App from './App.vue'
 
 // import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
-
 import Routes from './routes'
+
 import axios from 'axios'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
+
+import VueQuillEditor from 'vue-quill-editor'
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+Vue.use(VueQuillEditor);
+
 //axios全局配置 
 axios.defaults.baseURL = 'https://wd7747294513zslrqc.wilddogio.com'
 //axios.defaults.headers.common['Authorization'] = 'Token'

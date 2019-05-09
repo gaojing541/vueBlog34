@@ -23,9 +23,7 @@ nav{
     margin: 0 30px;
     padding: 10px 0;
 }
-.router-link-active{
-    
-}
+
 ul{
     list-style: none;
     text-align: center;

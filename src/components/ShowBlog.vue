@@ -39,7 +39,7 @@ export default {
                       //return data.json();
                       return data.data;
                      //this.blogs = data.body.slice(0,10);
-                     //console.log(this.blogs);
+                     //console.log(data.data);
                      
                   })
                   //.then(function(data){
@@ -51,6 +51,7 @@ export default {
                       }
                       //console.log(blogsArray);
                      this.blogs = blogsArray;
+                     console.log("blogsArray:"+ blogsArray);
                   })  
     },
     computed:{
